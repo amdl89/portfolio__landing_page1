@@ -1,0 +1,684 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clause - Contract Management for Legal Teams</title>
+    <meta
+      name="description"
+      content="Clause helps legal teams work faster, smarter and more efficiently with intelligent contract management, data-driven insights, and seamless integrations."
+    />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+
+  <body class="font-sans text-2xl leading-snug font-normal text-primary-800">
+    <!-- Desktop Header -->
+    <header class="sticky top-0 z-10 hidden max-h-20 bg-bg-cream md:block">
+      <div class="container mx-auto md:px-2">
+        <nav class="flex items-center justify-between py-2">
+          <a class="flex cursor-pointer items-center gap-1" href="#header">
+            <img src="/logo.svg" alt="clause logo" />
+
+            <h2 class="text-4xl font-semibold">Clause</h2>
+          </a>
+
+          <ul class="flex items-center gap-8">
+            <li class="nav-link">
+              <a href="#features">Features</a>
+            </li>
+
+            <li class="nav-link">
+              <a href="#integrations">Integrations</a>
+            </li>
+
+            <li class="nav-link">
+              <a href="#about">About</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Mobile Header -->
+    <header class="sticky top-0 z-10 bg-bg-cream md:hidden">
+      <div class="container mx-auto md:px-2">
+        <nav class="flex items-center justify-between py-2">
+          <a class="flex cursor-pointer items-center gap-1" href="#header">
+            <img src="/logo.svg" alt="clause logo" />
+
+            <h2 class="text-4xl font-semibold">Clause</h2>
+          </a>
+
+          <!-- Hamburger Button -->
+          <button
+            id="hamburger-btn"
+            class="hamburger-btn"
+            aria-label="Toggle menu"
+          >
+            <!-- Hamburger Icon -->
+            <svg
+              id="hamburger-icon"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="2"
+              stroke="currentColor"
+              class="size-8"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+              />
+            </svg>
+            <!-- Close Icon (hidden by default) -->
+            <svg
+              id="close-icon"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="2"
+              stroke="currentColor"
+              class="hidden size-8"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M6 18 18 6M6 6l12 12"
+              />
+            </svg>
+          </button>
+        </nav>
+
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-nav" class="mobile-nav">
+          <ul class="flex flex-col gap-4 border-t border-stone-200 px-1 py-4">
+            <li class="nav-link">
+              <a href="#features">Features</a>
+            </li>
+
+            <li class="nav-link">
+              <a href="#integrations">Integrations</a>
+            </li>
+
+            <li class="nav-link">
+              <a href="#about">About</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <div
+      id="header"
+      class="flex min-h-[calc(100vh-5rem)] flex-col justify-between bg-bg-cream"
+    >
+      <section class="py-16">
+        <div
+          class="relative container mx-auto flex flex-col items-center gap-8 md:px-2"
+        >
+          <div class="badge">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="size-6"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="m3.75 13.5 10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75Z"
+              />
+            </svg>
+
+            <span>Create For Fast</span>
+          </div>
+
+          <h1 class="hero-text animate-fade-up max-w-6xl text-center">
+            One tool to
+
+            <span class="underline decoration-accent-500 underline-offset-8">
+              manage
+            </span>
+
+            contracts and your team
+          </h1>
+
+          <p class="animate-fade-up-delay-1 max-w-5xl text-center">
+            Clause helps legal teams work faster, smarter and more efficiently,
+            delivering the visibility and data-driven insights to mitigate risk
+            and ensure compliance.
+          </p>
+
+          <div class="flex flex-col items-center gap-6 md:flex-row">
+            <button class="btn-primary">Start for Free</button>
+
+            <button class="btn-secondary">Get a Demo</button>
+          </div>
+
+          <img
+            class="avatar animate-float-in-left absolute top-1 left-2 hidden sm:block md:top-8 md:left-4"
+            src="/person-1.jpg"
+            alt="avatar-1"
+          />
+
+          <img
+            class="avatar animate-float-in-right absolute top-1 right-2 hidden sm:block md:top-8 md:right-4"
+            src="/person-2.jpg"
+            alt="avatar-2"
+          />
+
+          <img
+            class="avatar animate-float-in-left-delay absolute bottom-2 left-5 hidden sm:block md:bottom-8 md:left-16"
+            src="/person-3.jpg"
+            alt="avatar-3"
+          />
+
+          <img
+            class="avatar animate-float-in-right-delay absolute right-5 bottom-2 hidden sm:block md:right-16 md:bottom-8"
+            src="/person-4.jpg"
+            alt="avatar-4"
+          />
+        </div>
+      </section>
+
+      <section class="animate-fade-up-delay-2 py-12">
+        <div
+          class="container mx-auto flex flex-col items-center justify-between md:px-2 xl:flex-row"
+        >
+          <p class="min-w-xs text-center font-semibold">
+            More than 100+
+            <br class="hidden xl:block" />
+            companies partner
+          </p>
+
+          <div
+            class="flex flex-col flex-wrap items-center gap-12 md:gap-8 xl:flex-row"
+          >
+            <div class="flex items-center gap-1">
+              <img
+                src="/hubspot.svg"
+                alt="HubSpot"
+                class="partner-logo hidden h-36 2xl:block"
+              />
+            </div>
+
+            <div class="partner-logo-text flex items-center gap-1">
+              <img src="/dropbox.svg" alt="Dropbox" class="h-12" />
+
+              <span>Dropbox</span>
+            </div>
+
+            <div class="partner-logo-text flex items-center gap-1">
+              <img src="/square.svg" alt="Square" class="h-12" />
+
+              <span>Square</span>
+            </div>
+
+            <div class="partner-logo-text flex items-center gap-1">
+              <img src="/intercom.svg" alt="Intercom" class="h-12" />
+
+              <span>INTERCOM</span>
+            </div>
+
+            <div class="partner-logo-text flex items-center gap-1">
+              <img src="/grammarly.svg" alt="Grammarly" class="h-12" />
+
+              <span>grammarly</span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <section id="features" class="bg-white py-12">
+      <div class="container mx-auto flex flex-col items-center gap-12 md:px-2">
+        <div class="badge scroll-animate">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="size-6"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M2.25 7.125C2.25 6.504 2.754 6 3.375 6h6c.621 0 1.125.504 1.125 1.125v3.75c0 .621-.504 1.125-1.125 1.125h-6a1.125 1.125 0 0 1-1.125-1.125v-3.75ZM14.25 8.625c0-.621.504-1.125 1.125-1.125h5.25c.621 0 1.125.504 1.125 1.125v8.25c0 .621-.504 1.125-1.125 1.125h-5.25a1.125 1.125 0 0 1-1.125-1.125v-8.25ZM3.75 16.125c0-.621.504-1.125 1.125-1.125h5.25c.621 0 1.125.504 1.125 1.125v2.25c0 .621-.504 1.125-1.125 1.125h-5.25a1.125 1.125 0 0 1-1.125-1.125v-2.25Z"
+            />
+          </svg>
+
+          <span>Features</span>
+        </div>
+
+        <h2 class="hero-text scroll-animate max-w-6xl text-center text-6xl">
+          Latest advanced technologies to ensure everything you need
+        </h2>
+
+        <p class="scroll-animate max-w-6xl text-center">
+          Maximize your team's productivity and security with our affordable,
+          user-friendly contract management system.
+        </p>
+
+        <div class="grid w-full grid-cols-2 gap-8">
+          <div
+            class="card scroll-animate-left col-span-2 flex flex-col items-stretch justify-between gap-4 overflow-hidden bg-bg-section-alt pt-12 lg:flex-row lg:items-start"
+          >
+            <div
+              class="flex flex-1 flex-col items-start justify-between px-12 2xl:h-100"
+            >
+              <div class="flex flex-col gap-4">
+                <h3 class="hero-text text-5xl">Dynamic Dashboard</h3>
+                <p>
+                  Cause heps legal teams work faster, smarter and more
+                  efficiently, delivering the visibility and data-driven
+                  insights to mitigate risk and ensure compliance
+                </p>
+              </div>
+
+              <button class="btn-primary mt-4 2xl:mt-0">Explore all</button>
+            </div>
+
+            <div class="flex-1">
+              <img
+                class="w-full"
+                src="/clause-dashboard.png"
+                alt="clause dashboard"
+                loading="lazy"
+              />
+            </div>
+          </div>
+
+          <div class="card scroll-animate-left col-span-2 lg:col-span-1">
+            <div
+              class="flex flex-col items-center gap-4 bg-bg-section-alt p-12"
+            >
+              <h3 class="hero-text text-5xl">Smart notifications</h3>
+
+              <p class="text-center">
+                Easily accessible from the notifications center, calendar or
+                email with the relevant acitvities
+              </p>
+            </div>
+
+            <div class="pointer-events-none p-12">
+              <div class="flex items-center justify-between">
+                <span class="font-semibold">Email notification</span>
+
+                <button class="btn-secondary btn-sm">Save</button>
+              </div>
+
+              <ul
+                class="mt-6 divide-y-2 divide-gray-200 border-t-2 border-gray-200"
+              >
+                <li class="flex items-center justify-between py-6">
+                  <span>New messages, comments or replies</span>
+                </li>
+
+                <li class="flex items-center justify-between py-6">
+                  <span>Social emails</span>
+                </li>
+
+                <li class="flex items-center justify-between py-6">
+                  <span>Announcement and Update</span>
+                </li>
+
+                <li class="flex items-center justify-between py-6">
+                  <span>Reminders</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="card scroll-animate-right col-span-2 lg:col-span-1">
+            <div
+              class="flex flex-col items-center gap-4 bg-bg-section-alt p-12"
+            >
+              <h3 class="hero-text text-5xl">Task Management</h3>
+
+              <p class="text-center">
+                Discuss contract queries, managee tasks, secure approvals, track
+                progress in the workspace.
+              </p>
+            </div>
+
+            <div class="pointer-events-none p-12">
+              <div class="flex items-center justify-between">
+                <span class="font-semibold">Activity</span>
+
+                <button class="btn-secondary btn-sm">Add Message</button>
+              </div>
+
+              <div class="mt-6 space-y-4">
+                <div class="rounded-2xl bg-white p-6">
+                  <div class="flex items-start gap-4">
+                    <img
+                      class="avatar size-12 border-2"
+                      src="/person-4.jpg"
+                      alt="avatar-4"
+                      loading="lazy"
+                    />
+
+                    <div class="flex-1">
+                      <div class="flex items-center justify-between">
+                        <div>Bill Sanders</div>
+
+                        <div class="rounded-full bg-gray-200 px-6 py-3"></div>
+                      </div>
+
+                      <div class="mt-4 text-justify text-xl text-gray-800">
+                        Hello
+                        <span class="font-semibold text-primary-800">
+                          @Ragip Diller, </span
+                        >Could you sign the contract before the March 12? Thank
+                        you in advance &#x1F60A;
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="rounded-2xl bg-white p-6">
+                  <div class="flex items-start gap-4">
+                    <img
+                      class="avatar size-12 border-2"
+                      src="/person-3.jpg"
+                      alt="avatar-3"
+                      loading="lazy"
+                    />
+
+                    <div class="flex-1">
+                      <div class="flex items-center justify-between">
+                        <div>Jane Cooper</div>
+
+                        <div class="rounded-full bg-gray-200 px-6 py-3"></div>
+                      </div>
+
+                      <div class="mt-4 text-justify text-xl text-gray-800">
+                        I have uploaded the new contract
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="integrations" class="bg-primary-800 p-16 text-accent-50">
+      <div
+        class="container mx-auto flex flex-col items-center justify-between gap-12 md:px-2"
+      >
+        <div class="badge scroll-animate">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="size-6"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M13.5 16.875h3.375m0 0h3.375m-3.375 0V13.5m0 3.375v3.375M6 10.5h2.25a2.25 2.25 0 0 0 2.25-2.25V6a2.25 2.25 0 0 0-2.25-2.25H6A2.25 2.25 0 0 0 3.75 6v2.25A2.25 2.25 0 0 0 6 10.5Zm0 9.75h2.25A2.25 2.25 0 0 0 10.5 18v-2.25a2.25 2.25 0 0 0-2.25-2.25H6a2.25 2.25 0 0 0-2.25 2.25V18A2.25 2.25 0 0 0 6 20.25Zm9.75-9.75H18a2.25 2.25 0 0 0 2.25-2.25V6A2.25 2.25 0 0 0 18 3.75h-2.25A2.25 2.25 0 0 0 13.5 6v2.25a2.25 2.25 0 0 0 2.25 2.25Z"
+            />
+          </svg>
+
+          <span>Integrations</span>
+        </div>
+
+        <h2
+          class="hero-text scroll-animate max-w-4xl text-center text-6xl text-accent-50"
+        >
+          Don't replace. Integrate.
+        </h2>
+
+        <p class="scroll-animate max-w-4xl text-center">
+          We understand the hussle of replacing the logn used tools in your
+          process. That's why we integrate tools you use in your day-to-day
+          work.
+        </p>
+
+        <div
+          class="scroll-animate flex flex-wrap items-center justify-center gap-8"
+        >
+          <img
+            class="rounded-xl"
+            src="/logo-google.png"
+            alt="google logo"
+            loading="lazy"
+          />
+
+          <img
+            class="rounded-xl"
+            src="/logo-mailchimp.png"
+            alt="mailchimp logo"
+            loading="lazy"
+          />
+
+          <img
+            class="rounded-xl"
+            src="/logo-shopify.png"
+            alt="shopify logo"
+            loading="lazy"
+          />
+
+          <img
+            class="rounded-xl"
+            src="/logo-notion.png"
+            alt="notion logo"
+            loading="lazy"
+          />
+
+          <img
+            class="rounded-xl"
+            src="/logo-slack.png"
+            alt="slack logo"
+            loading="lazy"
+          />
+
+          <img
+            class="rounded-xl"
+            src="/logo-paypal.png"
+            alt="paypal logo"
+            loading="lazy"
+          />
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-white py-12">
+      <div
+        class="container mx-auto flex flex-col items-center justify-between gap-6 md:px-2"
+      >
+        <h1 class="hero-text scroll-animate max-w-6xl text-center italic">"</h1>
+
+        <h3
+          class="hero-text testimonial-quote scroll-animate max-w-6xl text-center text-5xl"
+        >
+          "Clause is hepling our company to decrease operational expenses and
+          turnaround time, while increasing the compliance, resource allocation
+          and effectiveness of our contract management."
+        </h3>
+
+        <div class="scroll-animate flex flex-col items-center gap-2">
+          <img
+            class="avatar"
+            src="/person-1.jpg"
+            alt="avatar-1"
+            loading="lazy"
+          />
+
+          <span>Darlene Robertson</span>
+
+          <span class="text-xl text-gray-800"
+            >Head of Strategy at Mailchimp</span
+          >
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="bg-white py-12">
+      <div class="container mx-auto flex flex-col gap-8 md:px-2">
+        <div
+          class="scroll-animate flex flex-col items-center justify-between gap-8 rounded-2xl bg-bg-section-alt p-16 md:flex-row"
+        >
+          <div>
+            <h2 class="hero-text text-center text-6xl">2021</h2>
+            <div class="text-center">Clause Founded</div>
+          </div>
+
+          <div>
+            <h2 class="hero-text text-center text-6xl">50k+</h2>
+            <div class="text-center">Active Users</div>
+          </div>
+
+          <div>
+            <h2 class="hero-text text-center text-6xl">1k+</h2>
+            <div class="text-center">Company Partners</div>
+          </div>
+        </div>
+
+        <p class="scroll-animate text-center">
+          Clause is a technology company transforming how businesses manage
+          contracts and legal documentation. Our platform leverages intelligent
+          automation to streamline contract creation, negotiation, and lifecycle
+          management—reducing manual work and accelerating deal cycles. We
+          combine deep legal expertise with technical innovation to deliver
+          tools that empower legal teams and business leaders alike. With a
+          commitment to security and user experience, Clause helps organizations
+          make contracts work smarter so they can focus on growing their
+          business.
+        </p>
+      </div>
+    </section>
+
+    <section class="bg-primary-800 p-16 text-accent-50">
+      <div
+        class="container mx-auto flex flex-col items-stretch justify-between gap-6 md:px-2 lg:items-center xl:flex-row"
+      >
+        <h2
+          class="hero-text scroll-animate max-w-3xl text-center text-6xl text-accent-50"
+        >
+          Discover the full scale of
+          <span class="underline decoration-accent-500 underline-offset-8"
+            >Clause</span
+          >
+          capabilities
+        </h2>
+
+        <div
+          class="scroll-animate xl:items-cebter flex flex-col items-stretch justify-between gap-6 md:items-center xl:flex-row xl:gap-4"
+        >
+          <button class="btn-accent-secondary btn-md">Get a Demo</button>
+
+          <button class="btn-accent btn-md">Start for Free</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-gray-900 text-lg text-accent-50">
+      <div
+        class="container mx-auto flex flex-col items-center justify-between gap-4 py-4 md:flex-row md:gap-8 md:px-2"
+      >
+        <div>&copy; Copyright 2026 Clause. All rights reserved.</div>
+
+        <div class="flex items-center justify-between gap-6">
+          <span>
+            <svg
+              class="h-6 w-6"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M22 5.892a8.178 8.178 0 0 1-2.355.635 4.074 4.074 0 0 0 1.8-2.235 8.343 8.343 0 0 1-2.605.981A4.13 4.13 0 0 0 15.85 4a4.068 4.068 0 0 0-4.1 4.038c0 .31.035.618.105.919A11.705 11.705 0 0 1 3.4 4.734a4.006 4.006 0 0 0 1.268 5.392 4.165 4.165 0 0 1-1.859-.5v.05A4.057 4.057 0 0 0 6.1 13.635a4.192 4.192 0 0 1-1.856.07 4.108 4.108 0 0 0 3.831 2.807A8.36 8.36 0 0 1 2 18.184 11.732 11.732 0 0 0 8.291 20 11.502 11.502 0 0 0 19.964 8.5c0-.177 0-.349-.012-.523A8.143 8.143 0 0 0 22 5.892Z"
+                clip-rule="evenodd"
+              />
+            </svg>
+          </span>
+
+          <span>
+            <svg
+              class="h-6 w-6"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M12.51 8.796v1.697a3.738 3.738 0 0 1 3.288-1.684c3.455 0 4.202 2.16 4.202 4.97V19.5h-3.2v-5.072c0-1.21-.244-2.766-2.128-2.766-1.827 0-2.139 1.317-2.139 2.676V19.5h-3.19V8.796h3.168ZM7.2 6.106a1.61 1.61 0 0 1-.988 1.483 1.595 1.595 0 0 1-1.743-.348A1.607 1.607 0 0 1 5.6 4.5a1.601 1.601 0 0 1 1.6 1.606Z"
+                clip-rule="evenodd"
+              />
+              <path d="M7.2 8.809H4V19.5h3.2V8.809Z" />
+            </svg>
+          </span>
+
+          <span>
+            <svg
+              class="h-6 w-6"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              fill="none"
+              viewBox="0 0 24 24"
+            >
+              <path
+                fill="currentColor"
+                fill-rule="evenodd"
+                d="M3 8a5 5 0 0 1 5-5h8a5 5 0 0 1 5 5v8a5 5 0 0 1-5 5H8a5 5 0 0 1-5-5V8Zm5-3a3 3 0 0 0-3 3v8a3 3 0 0 0 3 3h8a3 3 0 0 0 3-3V8a3 3 0 0 0-3-3H8Zm7.597 2.214a1 1 0 0 1 1-1h.01a1 1 0 1 1 0 2h-.01a1 1 0 0 1-1-1ZM12 9a3 3 0 1 0 0 6 3 3 0 0 0 0-6Zm-5 3a5 5 0 1 1 10 0 5 5 0 0 1-10 0Z"
+                clip-rule="evenodd"
+              />
+            </svg>
+          </span>
+
+          <span>
+            <svg
+              class="h-6 w-6"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M21.7 8.037a4.26 4.26 0 0 0-.789-1.964 2.84 2.84 0 0 0-1.984-.839c-2.767-.2-6.926-.2-6.926-.2s-4.157 0-6.928.2a2.836 2.836 0 0 0-1.983.839 4.225 4.225 0 0 0-.79 1.965 30.146 30.146 0 0 0-.2 3.206v1.5a30.12 30.12 0 0 0 .2 3.206c.094.712.364 1.39.784 1.972.604.536 1.38.837 2.187.848 1.583.151 6.731.2 6.731.2s4.161 0 6.928-.2a2.844 2.844 0 0 0 1.985-.84 4.27 4.27 0 0 0 .787-1.965 30.12 30.12 0 0 0 .2-3.206v-1.516a30.672 30.672 0 0 0-.202-3.206Zm-11.692 6.554v-5.62l5.4 2.819-5.4 2.801Z"
+                clip-rule="evenodd"
+              />
+            </svg>
+          </span>
+        </div>
+      </div>
+    </section>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,249 @@
+@import "tailwindcss";
+
+@theme {
+  /* ================================
+     COLORS
+     ================================ */
+
+  /* Primary - Dark Green */
+  --color-primary-50: #f0fdf4;
+  --color-primary-100: #dcfce7;
+  --color-primary-200: #bbf7d0;
+  --color-primary-300: #86efac;
+  --color-primary-400: #4ade80;
+  --color-primary-500: #22c55e;
+  --color-primary-600: #16a34a;
+  --color-primary-700: #1a5d3a;
+  --color-primary-800: #1b4332;
+  --color-primary-900: #14532d;
+  --color-primary-950: #0a2818;
+
+  /* Accent - Yellow/Gold */
+  --color-accent-50: #fefce8;
+  --color-accent-100: #fef9c3;
+  --color-accent-200: #fef08a;
+  --color-accent-300: #fde047;
+  --color-accent-400: #facc15;
+  --color-accent-500: #d4a847;
+  --color-accent-600: #ca8a04;
+
+  /* Semantic Colors */
+  --color-bg-cream: #f7efe8;
+  --color-bg-light: #f5f3ef;
+  --color-bg-section-alt: #f0ede6;
+
+  /* ================================
+     TYPOGRAPHY
+     ================================ */
+  --font-sans: "Inter", system-ui, sans-serif;
+  --font-serif: "Playfair Display", Georgia, serif;
+
+  /* ================================
+     SHADOWS
+     ================================ */
+  --shadow-card: 0 4px 20px rgb(0 0 0 / 0.06);
+  --shadow-button: 0 2px 8px rgb(27 67 50 / 0.15);
+
+  /* ================================
+     ANIMATIONS
+     ================================ */
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --animation-duration: 1.2s;
+  --animation-distance: 60px;
+}
+
+/* ================================
+   COMPONENT STYLES
+   ================================ */
+
+@layer components {
+  /* --------------------------------
+     Buttons
+     -------------------------------- */
+  .btn-primary {
+    @apply rounded-2xl px-10 py-6 text-lg font-medium transition bg-primary-800 text-primary-200 shadow-button hover:-translate-y-0.5 hover:bg-primary-900 hover:text-primary-300;
+  }
+
+  .btn-secondary {
+    @apply rounded-2xl px-10 py-6 text-lg font-medium transition bg-white text-primary-900 hover:bg-primary-800 hover:text-white;
+  }
+
+  .btn-accent {
+    @apply rounded-2xl px-10 py-6 text-lg font-medium transition bg-accent-400 text-primary-800 shadow-button hover:-translate-y-0.5 hover:bg-accent-500 hover:text-primary-900;
+  }
+
+  .btn-accent-secondary {
+    @apply rounded-2xl px-10 py-6 text-lg font-medium transition bg-white text-primary-900 hover:bg-accent-500 hover:text-white;
+  }
+
+  .btn-sm {
+    @apply rounded-xl px-8 py-3;
+  }
+
+  .btn-md {
+    @apply rounded-2xl px-12 py-4;
+  }
+
+  /* --------------------------------
+     UI Components
+     -------------------------------- */
+  .avatar {
+    @apply size-24 rounded-full border-6 border-white object-cover shadow-md;
+  }
+
+  .card {
+    @apply rounded-2xl border border-stone-200 bg-bg-light shadow-card;
+  }
+
+  .badge {
+    @apply inline-flex items-center gap-2 rounded-full bg-accent-200 px-4 py-2 text-sm font-medium tracking-wider text-primary-800 uppercase;
+  }
+
+  /* --------------------------------
+     Typography
+     -------------------------------- */
+  .hero-text {
+    @apply text-6xl leading-tight font-semibold -tracking-wide text-primary-800 sm:text-8xl;
+  }
+
+  .testimonial-quote {
+    @apply leading-relaxed text-primary-800 italic;
+  }
+
+  /* --------------------------------
+     Navigation
+     -------------------------------- */
+  .nav-link {
+    @apply font-medium text-primary-800 transition-colors hover:cursor-pointer hover:text-primary-600;
+  }
+
+  .hamburger-btn {
+    @apply rounded-lg p-2 text-primary-800 transition-colors hover:bg-primary-200 focus:ring-2 focus:ring-primary-600 focus:outline-none;
+  }
+
+  .mobile-nav {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+  }
+
+  .mobile-nav.open {
+    max-height: 300px;
+  }
+
+  /* --------------------------------
+     Partner Logos
+     -------------------------------- */
+  .partner-logo {
+    @apply h-12 opacity-60 grayscale transition hover:opacity-100 hover:grayscale-0;
+  }
+
+  .partner-logo-text {
+    @apply cursor-default text-3xl font-bold opacity-60 grayscale transition hover:opacity-100 hover:grayscale-0;
+  }
+
+  /* ================================
+     HERO ANIMATIONS (Page Load)
+     ================================ */
+  .animate-fade-up {
+    animation: fadeUp 0.8s ease-out forwards;
+  }
+
+  .animate-fade-up-delay-1 {
+    opacity: 0;
+    animation: fadeUp 0.8s ease-out 0.2s forwards;
+  }
+
+  .animate-fade-up-delay-2 {
+    opacity: 0;
+    animation: fadeUp 0.8s ease-out 0.6s forwards;
+  }
+
+  .animate-float-in-left {
+    opacity: 0;
+    animation: floatInLeft 0.9s ease-out 0.4s forwards;
+  }
+
+  .animate-float-in-left-delay {
+    opacity: 0;
+    animation: floatInLeft 0.9s ease-out 0.5s forwards;
+  }
+
+  .animate-float-in-right {
+    opacity: 0;
+    animation: floatInRight 0.9s ease-out 0.4s forwards;
+  }
+
+  .animate-float-in-right-delay {
+    opacity: 0;
+    animation: floatInRight 0.9s ease-out 0.5s forwards;
+  }
+
+  /* ================================
+     SCROLL ANIMATIONS
+     ================================ */
+  .scroll-animate,
+  .scroll-animate-left,
+  .scroll-animate-right {
+    opacity: 0;
+    transition:
+      opacity var(--animation-duration) var(--ease-out-expo),
+      transform var(--animation-duration) var(--ease-out-expo);
+  }
+
+  .scroll-animate {
+    transform: translateY(var(--animation-distance));
+  }
+
+  .scroll-animate-left {
+    transform: translateX(calc(var(--animation-distance) * -1));
+  }
+
+  .scroll-animate-right {
+    transform: translateX(var(--animation-distance));
+  }
+
+  .scroll-animate.is-visible,
+  .scroll-animate-left.is-visible,
+  .scroll-animate-right.is-visible {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+/* ================================
+   KEYFRAMES
+   ================================ */
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes floatInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px) scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
+
+@keyframes floatInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px) scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
