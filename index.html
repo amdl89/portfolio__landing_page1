@@ -172,27 +172,31 @@
           </div>
 
           <img
-            class="avatar animate-float-in-left absolute top-1 left-2 hidden sm:block md:top-8 md:left-4"
+            class="avatar absolute top-1 left-2 hidden opacity-0 sm:block md:top-8 md:left-4"
             src="/person-1.jpg"
             alt="avatar-1"
+            onload="this.classList.add('animate-float-in-left')"
           />
 
           <img
-            class="avatar animate-float-in-right absolute top-1 right-2 hidden sm:block md:top-8 md:right-4"
+            class="avatar absolute top-1 right-2 hidden opacity-0 sm:block md:top-8 md:right-4"
             src="/person-2.jpg"
             alt="avatar-2"
+            onload="this.classList.add('animate-float-in-right')"
           />
 
           <img
-            class="avatar animate-float-in-left-delay absolute bottom-2 left-5 hidden sm:block md:bottom-8 md:left-16"
+            class="avatar absolute bottom-2 left-5 hidden opacity-0 sm:block md:bottom-8 md:left-16"
             src="/person-3.jpg"
             alt="avatar-3"
+            onload="this.classList.add('animate-float-in-left-delay')"
           />
 
           <img
-            class="avatar animate-float-in-right-delay absolute right-5 bottom-2 hidden sm:block md:right-16 md:bottom-8"
+            class="avatar absolute right-5 bottom-2 hidden opacity-0 sm:block md:right-16 md:bottom-8"
             src="/person-4.jpg"
             alt="avatar-4"
+            onload="this.classList.add('animate-float-in-right-delay')"
           />
         </div>
       </section>
