@@ -61,19 +61,19 @@
      Buttons
      -------------------------------- */
   .btn-primary {
-    @apply rounded-2xl px-10 py-6 text-lg font-medium transition bg-primary-800 text-primary-200 shadow-button hover:-translate-y-0.5 hover:bg-primary-900 hover:text-primary-300;
+    @apply rounded-2xl bg-primary-800 px-10 py-6 text-lg font-medium text-primary-200 shadow-button transition hover:-translate-y-0.5 hover:bg-primary-900 hover:text-primary-300;
   }
 
   .btn-secondary {
-    @apply rounded-2xl px-10 py-6 text-lg font-medium transition bg-white text-primary-900 hover:bg-primary-800 hover:text-white;
+    @apply rounded-2xl bg-white px-10 py-6 text-lg font-medium text-primary-900 transition hover:bg-primary-800 hover:text-white;
   }
 
   .btn-accent {
-    @apply rounded-2xl px-10 py-6 text-lg font-medium transition bg-accent-400 text-primary-800 shadow-button hover:-translate-y-0.5 hover:bg-accent-500 hover:text-primary-900;
+    @apply rounded-2xl bg-accent-400 px-10 py-6 text-lg font-medium text-primary-800 shadow-button transition hover:-translate-y-0.5 hover:bg-accent-500 hover:text-primary-900;
   }
 
   .btn-accent-secondary {
-    @apply rounded-2xl px-10 py-6 text-lg font-medium transition bg-white text-primary-900 hover:bg-accent-500 hover:text-white;
+    @apply rounded-2xl bg-white px-10 py-6 text-lg font-medium text-primary-900 transition hover:bg-accent-500 hover:text-white;
   }
 
   .btn-sm {
@@ -160,23 +160,31 @@
   }
 
   .animate-float-in-left {
+    will-change: transform, opacity;
+    transform: translateX(-30px);
     opacity: 0;
-    animation: floatInLeft 0.9s ease-out 0.4s forwards;
+    animation: floatInLeft 0.9s ease-out 0.8s forwards;
   }
 
   .animate-float-in-left-delay {
+    will-change: transform, opacity;
+    transform: translateX(-30px);
     opacity: 0;
-    animation: floatInLeft 0.9s ease-out 0.5s forwards;
+    animation: floatInLeft 0.9s ease-out 1s forwards;
   }
 
   .animate-float-in-right {
+    will-change: transform, opacity;
+    transform: translateX(30px);
     opacity: 0;
-    animation: floatInRight 0.9s ease-out 0.4s forwards;
+    animation: floatInRight 0.9s ease-out 0.8s forwards;
   }
 
   .animate-float-in-right-delay {
+    will-change: transform, opacity;
+    transform: translateX(30px);
     opacity: 0;
-    animation: floatInRight 0.9s ease-out 0.5s forwards;
+    animation: floatInRight 0.9s ease-out 1s forwards;
   }
 
   /* ================================
